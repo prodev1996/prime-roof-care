@@ -1,9 +1,11 @@
 import React from 'react';
-function Footer() {
+
+const Footer = () => {
   return (
     <footer className="footer">
-      <p>© 2025 Prime Roof Care | ABN: 123456789 | All rights reserved.</p>
+      <p>© {new Date().getFullYear()} Prime Roof Care. All rights reserved. | Website by Rajiv</p>
     </footer>
   );
-}
+};
+
 export default Footer;

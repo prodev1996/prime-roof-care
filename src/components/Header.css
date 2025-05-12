@@ -1,15 +1,26 @@
-/* src/components/Header.css */
+/* src/components/Header.css - SUPER PREMIUM FINAL IMPROVED */
 
-.header {
+.top-contact-bar {
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  padding: 5px 0;
+  text-align: center;
+  letter-spacing: 0.4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
-  padding: 15px 40px;                  /* 🟢 more breathing space */
+  background: linear-gradient(90deg, #181818 0%, #2a2a2a 100%);
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   position: sticky;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 9999;
+  height: 90px; /* ✅ Added explicit height */
 }
 
 .header-left {
@@ -18,17 +29,16 @@
 }
 
 .header-logo {
-  height: 60px;                         /* 🟢 bigger logo */
+  height: 60px;
   width: auto;
-  object-fit: contain;
   margin-right: 15px;
 }
 
 .company-name {
   color: #fff;
-  font-size: 1.5em;
-  font-weight: 600;
-  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -40,10 +50,10 @@
   color: #fff;
   margin-left: 30px;
   text-decoration: none;
-  font-size: 1.15em;
+  font-size: 1.1rem;
   font-weight: 500;
   position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.25s ease;
   cursor: pointer;
 }
 
@@ -59,34 +69,53 @@
 
 .nav-links a:hover {
   color: #4caf50;
+  transform: translateY(-2px);
 }
 
 .nav-links a:hover::after {
   width: 100%;
 }
 
+/* ✅ New global safe padding for sticky header */
+.page-content {
+  padding-top: 90px; /* same as header height */
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
-  .header {
+  .main-header {
     flex-direction: column;
-    align-items: center;
     padding: 12px 20px;
+    height: auto; /* ✅ allow flexible height on small screens */
+  }
+
+  .header-left {
+    margin-bottom: 10px;
   }
 
   .nav-links {
     flex-direction: column;
-    margin-top: 10px;
   }
 
   .nav-links a {
-    margin: 8px 0;
-    font-size: 1em;
+    margin: 10px 0;
+    font-size: 1rem;
   }
 
   .header-logo {
-    height: 50px;
+    height: 55px;
   }
 
   .company-name {
-    font-size: 1.3em;
+    font-size: 1.6rem;
+  }
+
+  .top-contact-bar {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+
+  .page-content {
+    padding-top: 110px; /* ✅ Extra space for mobile stacked header */
   }
 }

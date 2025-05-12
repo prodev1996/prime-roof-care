@@ -1,24 +1,33 @@
 // src/components/Header.js
 import React from 'react';
-import { Link } from 'react-scroll';
-import logo from '../assets/logo.png';
 import './Header.css';
+import logo from '../assets/logo.png';
+import { Link } from 'react-scroll';
 
-const Header = () => {
+function Header() {
   return (
-    <header className="header">
-      <div className="header-left">
-        <img src={logo} alt="Prime Roof Care Logo" className="header-logo" />
-        <h1 className="company-name">Prime Roof Care</h1>
+    <>
+      <div className="top-contact-bar">
+        <span>Email: info@primeroofcare.com</span>
+        <span> | </span>
+        <span>Call: 08 8004 6134</span>
       </div>
-      <nav className="nav-links">
-        <Link to="about" smooth={true} duration={500}>About</Link>
-        <Link to="services" smooth={true} duration={500}>Services</Link>
-        <Link to="gallery" smooth={true} duration={500}>Gallery</Link>
-        <Link to="contact" smooth={true} duration={500}>Contact</Link>
-      </nav>
-    </header>
+
+      <header className="main-header">
+        <div className="header-left">
+          <img src={logo} alt="Prime Roof Care Logo" className="header-logo" />
+          <h1 className="company-name">Prime Roof Care</h1>
+        </div>
+
+        <nav className="nav-links">
+          <Link to="about" smooth={true} duration={500}>About</Link>
+          <Link to="services" smooth={true} duration={500}>Services</Link>
+          <Link to="gallery" smooth={true} duration={500}>Gallery</Link>
+          <Link to="contact" smooth={true} duration={500}>Contact</Link>
+        </nav>
+      </header>
+    </>
   );
-};
+}
 
 export default Header;
