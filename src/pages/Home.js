@@ -6,16 +6,15 @@ import Gallery from '../components/Gallery';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import ContactForm from '../components/ContactForm';
 
-function Home() {
-  return (
-    <>
-      <HeroSection />
-      <AboutUs />
-      <Services />
-      <Gallery />
-      <TestimonialsCarousel />
-      <ContactForm />
-    </>
-  );
-}
+const Home = () => (
+  <main>
+    <HeroSection />
+    <AboutUs />
+    <Services />
+    <Gallery />
+    <TestimonialsCarousel />
+    <ContactForm />
+  </main>
+);
+
 export default Home;
