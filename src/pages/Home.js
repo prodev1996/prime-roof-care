@@ -3,7 +3,7 @@ import HeroSection from '../components/HeroSection';
 import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import Gallery from '../components/Gallery';
-import Testimonials from '../components/Testimonials';
+import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import ContactForm from '../components/ContactForm';
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
       <AboutUs />
       <Services />
       <Gallery />
-      <Testimonials />
+      <TestimonialsCarousel />
       <ContactForm />
     </>
   );

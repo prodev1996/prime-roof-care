@@ -1,0 +1,34 @@
+/* src/components/TestimonialsCarousel.css */
+
+.carousel-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px 20px;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial-stars {
+    color: #f4c150;
+    font-size: 20px;
+}
+
+.testimonial-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #222;
+}
