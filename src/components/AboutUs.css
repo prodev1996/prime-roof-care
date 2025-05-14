@@ -1,52 +1,60 @@
-/* src/components/AboutUs.css - FINAL CLEANED */
+/* src/components/AboutUs.css */
 
-.about {
-    text-align: center;
+.about-section {
     padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
 }
 
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+.about-section h2 {
+    font-size: 2.5rem;
     color: #333;
+    margin-bottom: 10px;
 }
 
-.about-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1200px;
+.separator {
+    width: 60px;
+    height: 4px;
+    background-color: #4CAF50;
+    margin: 0 auto 30px;
+    border-radius: 2px;
+}
+
+.about-container {
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.about-text {
-    flex: 1 1 400px;
-    max-width: 500px;
+.about-container p {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
-.about-image img {
-    flex: 1 1 300px;
-    max-width: 350px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Responsive */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
+    .about-section h2 {
+        font-size: 2rem;
     }
 
-    .about-image img {
-        max-width: 90%;
+    .about-container p {
+        font-size: 1rem;
     }
 
-    .about-text {
-        text-align: center;
+    .about-image {
+        max-width: 300px;
     }
 }

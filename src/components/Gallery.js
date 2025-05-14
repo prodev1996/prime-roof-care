@@ -1,42 +1,38 @@
 // src/components/Gallery.js
-import React, { useState } from 'react';
-import roof1 from '../assets/images/roof-cleaning.jpg';
-import roof2 from '../assets/images/gutter-cleaning.jpg';
-import roof3 from '../assets/images/roof-restoration.jpg';
+import React from 'react';
 import './Gallery.css';
 
-function Gallery() {
-  const images = [
-    { src: roof1, alt: 'Roof Cleaning' },
-    { src: roof2, alt: 'Gutter Cleaning' },
-    { src: roof3, alt: 'Roof Restoration' }
-  ];
+import img1 from '../assets/images/img1.jpg';
+import img2 from '../assets/images/img2.jpg';
+import img3 from '../assets/images/img3.jpg';
+import img4 from '../assets/images/img4.jpg';
 
-  const [selectedImage, setSelectedImage] = useState(null);
+const Gallery = () => {
+    return (
+        <section id="gallery" className="gallery-section" data-aos="fade-up">
+            <h2 className="gallery-heading">Project Gallery</h2>
+            <p className="gallery-subtext">See the transformation our expert team delivers for clients around Adelaide.</p>
 
-  return (
-    <section id="gallery" className="gallery">
-      <h2>Our Work Gallery</h2>
-      <div className="gallery-grid">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={img.src}
-            alt={img.alt}
-            onClick={() => setSelectedImage(img)}
-          />
-        ))}
-      </div>
-
-      {selectedImage && (
-        <div className="modal" onClick={() => setSelectedImage(null)}>
-          <span className="close">&times;</span>
-          <img className="modal-content" src={selectedImage.src} alt={selectedImage.alt} />
-          <div className="caption">{selectedImage.alt}</div>
-        </div>
-      )}
-    </section>
-  );
-}
+            <div className="gallery-grid">
+                <div className="gallery-item">
+                    <img src={img1} alt="Roof Before Cleaning" />
+                    <p>Before</p>
+                </div>
+                <div className="gallery-item">
+                    <img src={img2} alt="Roof After Cleaning" />
+                    <p>After</p>
+                </div>
+                <div className="gallery-item">
+                    <img src={img3} alt="Gutter Before Cleaning" />
+                    <p>Before</p>
+                </div>
+                <div className="gallery-item">
+                    <img src={img4} alt="Gutter After Cleaning" />
+                    <p>After</p>
+                </div>
+            </div>
+        </section>
+    );
+};
 
 export default Gallery;

@@ -1,26 +1,39 @@
 // src/components/Services.js
 import React from 'react';
-import './Services.css';   // ✅ Import your component-specific CSS
+import './Services.css';
 
 const services = [
-  { title: 'Roof Cleaning', description: 'Professional high-pressure cleaning to remove dirt, moss, and lichen.' },
-  { title: 'Roof Painting', description: 'Restore color & protect your roof with our durable coating systems.' },
-  { title: 'Roof Restoration', description: 'Full restoration to extend the life of your roof and improve appearance.' },
-  { title: 'Gutter Cleaning', description: 'Remove debris and prevent damage with our thorough gutter cleaning service.' }
+    {
+        title: "Roof Cleaning",
+        description: "High-pressure cleaning to remove dirt, moss, and lichen."
+    },
+    {
+        title: "Roof Painting",
+        description: "Restore color and protect with durable coatings."
+    },
+    {
+        title: "Roof Restoration",
+        description: "Full restoration to extend the life of your roof."
+    },
+    {
+        title: "Gutter Cleaning",
+        description: "Prevent damage with thorough gutter cleaning."
+    },
 ];
 
 const Services = () => (
-  <section id="services" className="services">
-    <h2>Our Services</h2>
-    <div className="service-cards">
-      {services.map((service, index) => (
-        <div className="service-card" key={index}>
-          <h3>{service.title}</h3>
-          <p>{service.description}</p>
+    <section className="services-section" id="services" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <div className="separator"></div>
+        <div className="services-container">
+            {services.map((service, index) => (
+                <div className="service-card" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+                </div>
+            ))}
         </div>
-      ))}
-    </div>
-  </section>
+    </section>
 );
 
 export default Services;

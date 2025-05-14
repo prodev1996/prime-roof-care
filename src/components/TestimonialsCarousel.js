@@ -1,45 +1,47 @@
 // src/components/TestimonialsCarousel.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import axios from 'axios';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './TestimonialsCarousel.css';
 
-const testimonials = [
-    {
-        quote: "Highly professional and reliable team. Very happy with the result.",
-        author: "John, Glenelg",
-        stars: 5
-    },
-    {
-        quote: "The roof cleaning was fast and perfect. Great value for money!",
-        author: "Emily, Norwood",
-        stars: 5
-    }
-];
+const TestimonialsCarousel = () => {
+    const [testimonials, setTestimonials] = useState([]);
 
-const TestimonialsCarousel = () => (
-    <section id="testimonials">
-        <h2 className="testimonial-heading">What Our Clients Say</h2>
-        <div className="carousel-container">
-            <Carousel 
-                showThumbs={false} 
-                showStatus={false} 
-                autoPlay 
-                infiniteLoop 
-                interval={4000}
-            >
-                {testimonials.map((t, index) => (
-                    <div key={index}>
-                        <p className="testimonial-quote">"{t.quote}"</p>
-                        <p className="testimonial-author">— {t.author}</p>
-                        <div className="testimonial-stars" aria-hidden="true">
-                            {"★".repeat(t.stars)}
-                        </div>
-                    </div>
-                ))}
-            </Carousel>
-        </div>
-    </section>
-);
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/api/testimonials/')
+            .then(res => setTestimonials(res.data))
+            .catch(err => console.error("Error fetching testimonials.", err));
+    }, []);
+
+    return (
+        <section id="testimonials" data-aos="fade-up">
+            <h2 className="testimonial-heading">What Our Clients Say</h2>
+            <div className="carousel-container">
+                {testimonials.length > 0 ? (
+                    <Carousel 
+                        showThumbs={false} 
+                        showStatus={false} 
+                        autoPlay 
+                        infiniteLoop 
+                        interval={4000}
+                    >
+                        {testimonials.map((t, index) => (
+                            <div key={index}>
+                                <p className="testimonial-quote">"{t.text}"</p>
+                                <p className="testimonial-author">— {t.name}</p>
+                                <div className="testimonial-stars" aria-hidden="true">
+                                    {"★".repeat(t.rating)}
+                                </div>
+                            </div>
+                        ))}
+                    </Carousel>
+                ) : (
+                    <p style={{ textAlign: 'center' }}>No testimonials available.</p>
+                )}
+            </div>
+        </section>
+    );
+};
 
 export default TestimonialsCarousel;

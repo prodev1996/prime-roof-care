@@ -1,76 +1,61 @@
 /* src/components/Gallery.css */
 
-.gallery {
+.gallery-section {
+    padding: 70px 20px;
+    background-color: #fff;
     text-align: center;
-    padding: 60px 20px;
 }
 
-.gallery h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+.gallery-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #333;
+    margin-bottom: 10px;
+}
+
+.gallery-subtext {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.gallery-grid img {
+.gallery-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.gallery-grid img:hover {
+.gallery-item img:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* Modal Styles */
-.modal {
-    display: flex;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.gallery-item p {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 8px;
+    font-weight: 600;
 }
 
-.modal-content {
-    max-width: 90%;
-    max-height: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close:hover {
-    color: #4caf50;
-}
-
-.caption {
-    margin-top: 15px;
-    font-size: 1.2rem;
-    color: #ccc;
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .gallery-heading {
+        font-size: 1.8rem;
+    }
+    .gallery-subtext {
+        font-size: 0.95rem;
+    }
+    .gallery-item p {
+        font-size: 0.9rem;
+    }
 }

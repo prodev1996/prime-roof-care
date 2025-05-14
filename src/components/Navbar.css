@@ -121,7 +121,7 @@
 
     .company-name {
         font-size: 1.6rem;
-        
+
     }
 
     .top-contact-bar {
@@ -132,4 +132,15 @@
     .page-content {
         padding-top: 110px;
     }
+}
+/* ✅ Logo subtle hover effect */
+.navbar-logo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* ✅ Sticky header smoother on Safari */
+.navbar {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
