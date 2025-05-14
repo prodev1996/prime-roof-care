@@ -1,0 +1,135 @@
+/* src/components/Navbar.css - SUPER PREMIUM FINAL */
+
+.top-contact-bar {
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 0;
+    text-align: center;
+    letter-spacing: 0.4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #181818 0%, #2a2a2a 100%);
+    padding: 15px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    height: 90px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 60px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.company-name {
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.navbar-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4caf50;
+    transition: width 0.3s;
+    margin-top: 4px;
+}
+
+.navbar-links a:hover {
+    color: #4caf50;
+    transform: translateY(-2px);
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+.quote-button {
+    background: #e53935;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.quote-button:hover {
+    background: #c62828;
+}
+
+/* ✅ Safe padding for sticky header */
+.page-content {
+    padding-top: 90px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 12px 20px;
+        height: auto;
+    }
+
+    .navbar-left {
+        margin-bottom: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+    }
+
+    .navbar-links a {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .navbar-logo {
+        height: 55px;
+    }
+
+    .company-name {
+        font-size: 1.6rem;
+        
+    }
+
+    .top-contact-bar {
+        font-size: 12px;
+        padding: 4px 0;
+    }
+
+    .page-content {
+        padding-top: 110px;
+    }
+}

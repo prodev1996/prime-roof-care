@@ -1,11 +1,12 @@
+// src/components/Footer.js
 import React from 'react';
+import './Footer.css';
 
-const Footer = () => {
-  return (
+const Footer = () => (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Prime Roof Care. All rights reserved. | Website by Rajiv</p>
+        <p>© 2025 Prime Roof Care. All rights reserved.</p>
+        <p>Website by Rajiv</p>
     </footer>
-  );
-};
+);
 
 export default Footer;

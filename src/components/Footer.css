@@ -1,0 +1,10 @@
+/* src/components/Footer.css */
+
+.footer {
+    text-align: center;
+    background: linear-gradient(90deg, #1c1c1c 0%, #2b2b2b 100%);
+    color: #ccc;
+    padding: 25px 15px;
+    font-size: 0.95em;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}

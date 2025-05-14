@@ -1,3 +1,5 @@
+// src/pages/Home.js
+
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import AboutUs from '../components/AboutUs';
@@ -7,7 +9,7 @@ import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import ContactForm from '../components/ContactForm';
 
 const Home = () => (
-  <main>
+  <main className="page-content">
     <HeroSection />
     <AboutUs />
     <Services />

@@ -1,34 +1,54 @@
-/* src/components/TestimonialsCarousel.css */
+/* src/components/TestimonialsCarousel.css - FINAL CLEANED */
 
 .carousel-container {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 25px 20px;
+    padding: 20px;
+}
+
+.testimonial-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;       /* ✅ THIS FIXES YOUR ISSUE */
 }
 
 .testimonial-quote {
     font-style: italic;
-    font-size: 1rem;
     color: #555;
+    font-size: 1.1rem;
     margin-bottom: 15px;
 }
 
 .testimonial-author {
-    font-weight: bold;
-    color: #333;
-}
-
-.testimonial-stars {
-    color: #f4c150;
-    font-size: 20px;
-}
-
-.testimonial-heading {
-    text-align: center;
-    margin-bottom: 20px;
     font-weight: 600;
     color: #222;
+    margin-bottom: 10px;
+}
+
+/* ✅ Anti-glitch: disable any button or animation inside carousel */
+.carousel .carousel__slide button {
+    all: unset !important;
+    pointer-events: none !important;
+    cursor: default !important;
+    background: transparent !important;
+}
+
+/* ✅ Anti-glitch: prevent animation near stars */
+.testimonial-stars,
+.testimonial-stars span {
+    font-size: 1.4rem;
+    color: #f4b400; /* gold stars */
+    cursor: default;
+    pointer-events: none;
+    display: inline !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* ✅ (Optional max safety) remove all child animations inside carousel */
+.carousel * {
+    animation: none !important;
+    transition: none !important;
 }

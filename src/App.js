@@ -1,16 +1,19 @@
+// src/App.js
 import React from 'react';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import TestimonialsCarousel from './components/TestimonialsCarousel';
+import WhatsAppButton from './components/WhatsAppButton';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
-      <Header />
+      <Navbar />
       <Home />
-      <TestimonialsCarousel />
       <Footer />
+      <WhatsAppButton />
+      <ScrollToTop />
     </>
   );
 }

@@ -18,7 +18,7 @@ const testimonials = [
 ];
 
 const TestimonialsCarousel = () => (
-    <section>
+    <section id="testimonials">
         <h2 className="testimonial-heading">What Our Clients Say</h2>
         <div className="carousel-container">
             <Carousel 
@@ -32,8 +32,8 @@ const TestimonialsCarousel = () => (
                     <div key={index}>
                         <p className="testimonial-quote">"{t.quote}"</p>
                         <p className="testimonial-author">— {t.author}</p>
-                        <div className="testimonial-stars">
-                            {'★'.repeat(t.stars)}
+                        <div className="testimonial-stars" aria-hidden="true">
+                            {"★".repeat(t.stars)}
                         </div>
                     </div>
                 ))}
