@@ -10,12 +10,29 @@ import ContactForm from '../components/ContactForm';
 
 const Home = () => (
   <main className="page-content">
-    <HeroSection />
-    <AboutUs />
-    <Services />
-    <Gallery />
-    <TestimonialsCarousel />
-    <ContactForm />
+    <section id="home">
+      <HeroSection />
+    </section>
+
+    <section id="about">
+      <AboutUs />
+    </section>
+
+    <section id="services">
+      <Services />
+    </section>
+
+    <section id="gallery">
+      <Gallery />
+    </section>
+
+    <section id="testimonials">
+      <TestimonialsCarousel />
+    </section>
+
+    <section id="contact">
+      <ContactForm />
+    </section>
   </main>
 );
 

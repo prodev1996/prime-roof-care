@@ -1,0 +1,17 @@
+.before-after-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.before-after-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.compare-box {
+  max-width: 600px;
+  width: 100%;
+}
